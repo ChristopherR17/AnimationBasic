@@ -58,7 +58,9 @@ public class Main extends ApplicationAdapter {
         TextureRegion currentFrame = walkAnimation.getKeyFrame(stateTime, true);
 
         batch.begin();
-        batch.draw(currentFrame, posX, posY);
+        batch.draw(currentFrame, posX, posY,
+            currentFrame.getRegionWidth() * 2,
+            currentFrame.getRegionHeight() * 2);
         batch.end();
     }
 
